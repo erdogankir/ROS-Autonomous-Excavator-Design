@@ -2,9 +2,9 @@
 
 This repository contains the complete conceptual design, kinematic modeling, ROS-based autonomous algorithms, and embedded systems architecture for a teleoperation-assisted autonomous excavator.
 
-![Gazebo Terrain & Target Truck](media/images/16.png)
+![Gazebo Terrain & Target Truck](media/images/13.png)
 
-![RViz OctoMap Volumetric Mapping](media/images/17.jpg)
+![RViz OctoMap Volumetric Mapping](media/images/14.png)
 
 ## 🎯 Project Overview
 In industries with harsh and hazardous environments like mining and construction, minimizing human exposure while maximizing operational efficiency is a critical engineering challenge. This project aims to transform traditional heavy machinery into smart, situational-aware systems. By developing a digital twin of a CAT 349E excavator, the system achieved an 84% operational success rate in end-to-end autonomous dig-and-load cycles across 100 simulation trials. 
