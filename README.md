@@ -31,7 +31,13 @@ All simulation and autonomous control phases were executed using **ROS Noetic**,
 ![Physical Prototype](media/images/18.png)
 
 ## 📂 Repository Structure
-Markdown
+* `/ros_workspace`: Contains ROS Noetic packages, Gazebo simulation environments, URDF models, MoveIt! configurations, and Python/OpenCV autonomy scripts.
+* `/embedded_systems`: PlatformIO-based C++ source code for ESP32 teleoperation and motor driver control logic.
+* `/cad_files`: SolidWorks native files and exported .STEP/.STL files for 3D printing of the 1:10 scale physical prototype.
+* `/documents`: Comprehensive engineering design report (in Turkish) detailing dynamic equations, electrical schematics, and simulation outputs.
+* `/media`: Contains project videos and high-resolution images demonstrating the Gazebo simulation and the physical prototype in action.
+
+```markdown
 ## 🛠️ Dependencies & Installation
 
 ### Prerequisites & Dependencies
@@ -68,11 +74,6 @@ To launch the Gazebo environment with the excavator and terrain:
 
 Bash
 roslaunch Exca-1 empty_world.launch
-* `/ros_workspace`: Contains ROS Noetic packages, Gazebo simulation environments, URDF models, MoveIt! configurations, and Python/OpenCV autonomy scripts.
-* `/embedded_systems`: PlatformIO-based C++ source code for ESP32 teleoperation and motor driver control logic.
-* `/cad_files`: SolidWorks native files and exported .STEP/.STL files for 3D printing of the 1:10 scale physical prototype.
-* `/documents`: Comprehensive engineering design report (in Turkish) detailing dynamic equations, electrical schematics, and simulation outputs.
-* `/media`: Contains project videos and high-resolution images demonstrating the Gazebo simulation and the physical prototype in action.
 
 ---
 *Designed by Erdoğan Kır as a senior Mechatronics Engineering design project.*
