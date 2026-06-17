@@ -103,11 +103,12 @@ Bu projeyi ROS ortamında derleyebilmek ve otonom döngüleri çalıştırabilme
 * Adafruit PCA9685 PWM Sürücü Kütüphanesi
 
 ## 🚀 Kurulum Talimatları (Installation)
+Markdown
 **1. ROS Çalışma Alanının (Workspace) Derlenmesi:**
 ```bash
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
-git clone [https://github.com/erdogankir/ROS-Autonomous-Excavator-Design.git](https://github.com/erdogankir/ROS-Autonomous-Excavator-Design.git)
+git clone https://github.com/erdogankir/ROS-Autonomous-Excavator-Design.git
 cd ..
 rosdep install --from-paths src --ignore-src -r -y
 catkin_make
