@@ -81,8 +81,6 @@ source devel/setup.bash
 ---
 *Designed by Erdoğan Kır as a senior Mechatronics Engineering design project.*
 
-NON-COMMERCIAL USE ONLY
-
 ---
 # Teleoperasyon Destekli Otonom Ekskavatör Tasarımı ve Modellemesi 🚜🤖
 
