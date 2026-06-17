@@ -26,6 +26,7 @@ All simulation and autonomous control phases were executed using **ROS Noetic**,
 4. **Trajectory Generation:** To eliminate mechanical jerks during operations, a custom Cosine Interpolation (S-Curve) motor was developed for smooth acceleration.
 5. **Hardware Proof of Concept:** A 6-axis open-loop physical prototype was manufactured, featuring low-latency teleoperation controlled by a Sony DualSense gamepad over Wi-Fi/Bluetooth.
 
+![PCAD Prototype](media/images/17.png)
 ![Physical Prototype](media/images/18.png)
 
 ## 📂 Repository Structure
@@ -45,9 +46,9 @@ NON-COMMERCIAL USE ONLY
 
 Bu depo, teleoperasyon destekli otonom bir ekskavatöre ait kavramsal tasarım, kinematik modelleme, ROS tabanlı otonom algoritmalar ve gömülü sistem mimarisini içermektedir.
 
-![Gazebo Terrain & Target Truck](media/16.png)
+![Gazebo Terrain & Target Truck](media/images/13.png)
 
-![RViz OctoMap Volumetric Mapping](media/17.jpg)
+![RViz OctoMap Volumetric Mapping](media/images/14.png)
 
 ## 🎯 Proje Özeti
 Madencilik ve inşaat gibi zorlu saha koşullarına sahip sektörlerde, operasyonel verimliliği maksimize ederken insan riskini minimize etmek kritik bir mühendislik hedefidir. Bu proje, geleneksel ağır iş makinelerini çevresel farkındalığa sahip akıllı sistemlere dönüştürmeyi amaçlamaktadır. CAT 349E ekskavatörünün dijital ikizi geliştirilmiş ve sistem, 100 simülasyon denemesinde uçtan uca otonom kazı-yükleme döngülerinde %84 operasyonel başarı oranına ulaşmıştır.
@@ -69,7 +70,8 @@ Tüm simülasyon ve otonom kontrol aşamaları **ROS Noetic** kullanılarak ger�
 4. **Yörünge Planlaması:** Operasyonlar sırasında mekanik sarsıntıları önlemek ve ivmelenmeyi yumuşatmak için Kosinüs İnterpolasyon (S-Curve) motoru geliştirilmiştir.
 5. **Donanımsal İspat (Proof of Concept):** Wi-Fi/Bluetooth üzerinden Sony DualSense oyun kumandası ile kontrol edilen, düşük gecikmeli teleoperasyon yeteneğine sahip 6 eksenli açık çevrim bir fiziksel prototip üretilmiştir.
 
-![Physical Prototype](media/prototype.png)
+![PCAD Prototype](media/images/17.png)
+![Physical Prototype](media/images/18.png)
 
 ## 📂 Depo Yapısı
 * `/ros_workspace`: ROS Noetic paketlerini, Gazebo simülasyon ortamlarını, URDF modellerini, MoveIt! yapılandırmalarını ve Python/OpenCV otonomi algoritmalarını içerir.
