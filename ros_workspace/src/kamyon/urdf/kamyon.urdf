@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="kamyon">
+  <link
+    name="kamyon_sasi">
+    <inertial>
+      <origin
+        xyz="-0.03713 0.061767 1.0529E-15"
+        rpy="0 0 0" />
+      <mass
+        value="54.71" />
+      <inertia
+        ixx="0.46006"
+        ixy="-0.080279"
+        ixz="5.93E-15"
+        iyy="2.4002"
+        iyz="3.1818E-15"
+        izz="2.1019" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_sasi.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_sasi.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="kamyon_kasa">
+    <inertial>
+      <origin
+        xyz="-0.002355 -8.2293E-16 0.09596"
+        rpy="0 0 0" />
+      <mass
+        value="10.506" />
+      <inertia
+        ixx="0.17224"
+        ixy="4.7533E-16"
+        ixz="-0.013304"
+        iyy="0.33738"
+        iyz="2.934E-17"
+        izz="0.39088" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_kasa.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.9 0.9 0.1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_kasa.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_kasa"
+    type="fixed">
+    <origin
+      xyz="-0.12718 0 0.08"
+      rpy="0 0 0" />
+    <parent
+      link="kamyon_sasi" />
+    <child
+      link="kamyon_kasa" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="kamyon_kupa">
+    <inertial>
+      <origin
+        xyz="-0.011543 -9.2883E-16 0.070709"
+        rpy="0 0 0" />
+      <mass
+        value="6.9933" />
+      <inertia
+        ixx="0.092084"
+        ixy="-5.5632E-17"
+        ixz="0.02008"
+        iyy="0.077981"
+        iyz="4.824E-17"
+        izz="0.0953" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_kupa.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.9 0.9 0.9 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_kupa.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_kupa"
+    type="fixed">
+    <origin
+      xyz="0.35405 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="kamyon_kasa" />
+    <child
+      link="kamyon_kupa" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="kamyon_cam">
+    <inertial>
+      <origin
+        xyz="0.012687 -1.8762E-15 0.050267"
+        rpy="0 0 0" />
+      <mass
+        value="1.8507" />
+      <inertia
+        ixx="0.02373"
+        ixy="1.1604E-19"
+        ixz="0.0010759"
+        iyy="0.0084887"
+        iyz="1.1195E-17"
+        izz="0.024871" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_cam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.3 0.3 0.3 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kamyon/meshes/kamyon_cam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_cam"
+    type="fixed">
+    <origin
+      xyz="0.019053 0 0.098354"
+      rpy="0 0 0" />
+    <parent
+      link="kamyon_kupa" />
+    <child
+      link="kamyon_cam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

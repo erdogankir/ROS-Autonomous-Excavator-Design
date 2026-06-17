@@ -1,0 +1,18 @@
+sensors:
+  - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+    point_cloud_topic: /kamera_on/depth/points
+    max_range: 2.6 # Kameranın 2.6 metre uzağına kadar olan engelleri haritala
+    point_subsample: 1 # Gelen noktaları atlama, hepsini işle (çözünürlük yüksek olsun)
+    padding_offset: 0.05 # Makinenin kendi kollarına 5 cm'lik bir güvenlik payı bırak
+    padding_scale: 1.0
+    max_update_rate: 5.0 # Haritayı saniyede 5 kez güncelle
+    filtered_cloud_topic: filtered_cloud_on
+    
+  - sensor_plugin: occupancy_map_monitor/PointCloudOctomapUpdater
+    point_cloud_topic: /kamera_cukur/depth/points
+    max_range: 2.6
+    point_subsample: 1
+    padding_offset: 0.05
+    padding_scale: 1.0
+    max_update_rate: 5.0
+    filtered_cloud_topic: filtered_cloud_cukur

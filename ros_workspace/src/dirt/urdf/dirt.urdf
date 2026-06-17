@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="santiye_sahasi">
+  <link name="dirt_link">
+    <inertial>
+      <origin xyz="-1.309 -0.027225 0.69035" rpy="0 0 0" />
+      <mass value="4533.2" />
+      <inertia ixx="19440" ixy="127.97" ixz="1668.8" iyy="14615" iyz="41.494" izz="32421" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://dirt/meshes/dirt_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.69804 0.69804 0.69804 1" />
+      </material>
+    </visual>
+    
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="package://dirt/meshes/dirt_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="dirt_link">
+    <visual>
+      <material>
+        <ambient>0.3 0.225 0.15 1</ambient>
+        <diffuse>0.66 0.48 0.3 1</diffuse>
+        <specular>0.02 0.02 0.02 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  
+  <gazebo reference="dirt_link"> <mu1>2.0</mu1>
+    <mu2>2.0</mu2>
+    
+    <kp>1000000.0</kp>
+    <kd>500.0</kd>
+    
+    <minDepth>0.005</minDepth>
+    <maxVel>0.0</maxVel>
+  </gazebo>
+
+  <gazebo>
+    <static>true</static>
+  </gazebo>
+</robot>

@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: Exca-1
+    relative_path: urdf/Exca-1.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/Exca-1.srdf
+  CONFIG:
+    author_name: erdo
+    author_email: erdogan.kir.ts@gmail.com
+    generated_timestamp: 1775106818

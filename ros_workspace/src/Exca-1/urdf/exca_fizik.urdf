@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="Exca-1">
+  <link name="base_link">
+    <inertial>
+      <origin xyz="-0.00093629 -7.0372E-16 0.067491" rpy="0 0 0" />
+      <mass value="37.697" />
+      <inertia ixx="0.8227" ixy="-6.4003E-17" ixz="0.001536" iyy="0.83904" iyz="-7.5689E-15" izz="1.5674" />
+    </inertial>
+    
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/base_link.STL" /></geometry>
+      <material name=""><color rgba="0.5 0.5 0.5 1" /></material>
+    </visual>
+    
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/base_link_o.STL" /></geometry>
+    </collision>
+  </link>
+
+  <link name="link_1">
+    <inertial>
+      <origin xyz="-0.16895 -1.1137E-15 0.081554" rpy="0 0 0" />
+      <mass value="26.764" />
+      <inertia ixx="0.30083" ixy="-3.5124E-17" ixz="0.024487" iyy="0.2943" iyz="1.729E-16" izz="0.53918" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/link_1_cool.STL" /></geometry>
+      <material name=""><color rgba="0.95 0.75 0.05 1" /></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/link_1.STL" /></geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_1" type="continuous">
+    <origin xyz="0 0 0.11304" rpy="0 0 0" />
+    <parent link="base_link" />
+    <child link="link_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="1000" velocity="1" />
+  </joint>
+
+  <link name="link_2">
+    <inertial>
+      <origin xyz="0.30458 0.073788 1.4816E-14" rpy="0 0 0" />
+      <mass value="6.2624" />
+      <inertia ixx="0.011494" ixy="0.0067413" ixz="-1.8835E-15" iyy="0.19523" iyz="3.5397E-17" izz="0.20289" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/link_2.STL" /></geometry>
+      <material name=""><color rgba="0.95 0.75 0.05 1" /></material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/link_2_o.STL" /></geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_2" type="revolute">
+    <origin xyz="0.07 0 0.115" rpy="1.5708 -1.2217 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="-1.919" upper="0" effort="1000" velocity="1" />
+  </joint>
+
+  <link name="link_3">
+    <inertial>
+      <origin xyz="0.1169 0.021719 1.0748E-14" rpy="0 0 0" />
+      <mass value="3.0384" />
+      <inertia ixx="0.0020654" ixy="0.0030753" ixz="-2.26E-16" iyy="0.040142" iyz="8.5149E-18" izz="0.041371" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/link_3.STL" /></geometry>
+      <material name=""><color rgba="0.95 0.75 0.05 1" /></material>
+    </visual>
+    <collision>
+    </collision>
+  </link>
+
+  <joint name="joint_3" type="revolute">
+    <origin xyz="0.672 0 0" rpy="0 0 -0.43633" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.268" upper="0" effort="1000" velocity="1" />
+  </joint>
+
+  <link name="link_4">
+    <inertial>
+      <origin xyz="-0.019219 0.091842 9.4282E-15" rpy="0 0 0" />
+      <mass value="1.1448" />
+      <inertia ixx="0.0032492" ixy="-0.00034637" ixz="-2.0773E-19" iyy="0.0016958" iyz="1.0893E-19" izz="0.0039132" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/link_4_12cm.STL" /></geometry>
+      <material name=""><color rgba="0.5 0.5 0.5 1" /></material>
+    </visual>
+    <collision>
+    </collision>
+  </link>
+
+  <joint name="joint_4" type="revolute">
+    <origin xyz="0.37548 0 0" rpy="0 0 -0.7854" />
+    <parent link="link_3" />
+    <child link="link_4" />
+    <axis xyz="0 0 1" />
+    <limit lower="-3.141" upper="0" effort="1000" velocity="1" />
+  </joint>
+
+  <link name="dummy_link">
+    <inertial>
+      <origin xyz="-0.0025454 -2.2832E-14 -0.0041762" rpy="0 0 0" />
+      <mass value="0.0006235" />
+      <inertia ixx="9.2896E-09" ixy="3.8701E-23" ixz="-2.035E-09" iyy="1.1529E-08" iyz="2.9634E-23" izz="4.837E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><mesh filename="package://Exca-1/meshes/dummy_link.STL" /></geometry>
+      <material name=""><color rgba="1 0 0 1" /></material>
+    </visual>
+    <collision>
+    </collision>
+  </link>
+
+  <joint name="joint_tcp" type="fixed">
+    <origin xyz="0.07 0.16 0" rpy="-1.5708 0 0" />
+    <parent link="link_4" />
+    <child link="dummy_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/</robotNamespace>
+    </plugin>
+  </gazebo>
+
+  <transmission name="trans_joint_1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_1"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface></joint>
+    <actuator name="motor_joint_1"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface><mechanicalReduction>1</mechanicalReduction></actuator>
+  </transmission>
+
+  <transmission name="trans_joint_2">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_2"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface></joint>
+    <actuator name="motor_joint_2"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface><mechanicalReduction>1</mechanicalReduction></actuator>
+  </transmission>
+
+  <transmission name="trans_joint_3">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_3"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface></joint>
+    <actuator name="motor_joint_3"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface><mechanicalReduction>1</mechanicalReduction></actuator>
+  </transmission>
+
+  <transmission name="trans_joint_4">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="joint_4"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface></joint>
+    <actuator name="motor_joint_4"><hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface><mechanicalReduction>1</mechanicalReduction></actuator>
+  </transmission>
+
+  <link name="kamera_on_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry><box size="0.02 0.04 0.02" /></geometry>
+      <material name=""><color rgba="0.0 1 0.0 1" /></material>
+    </visual>
+  </link>
+  <joint name="kamera_on_joint" type="fixed">
+    <origin xyz="0.08 0.08 0.4" rpy="0 0 0" /> <parent link="link_1" />
+    <child link="kamera_on_link" />
+  </joint>
+  <link name="kamera_on_optical" />
+  <joint name="kamera_on_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708" />
+    <parent link="kamera_on_link" />
+    <child link="kamera_on_optical" />
+  </joint>
+
+  <gazebo reference="kamera_on_link">
+    <sensor type="depth" name="kamera_on_sensor">
+      <always_on>true</always_on>
+      <update_rate>10.0</update_rate> <camera>
+        <horizontal_fov>1.57</horizontal_fov>
+        <image><format>R8G8B8</format><width>640</width><height>480</height></image>
+        <clip><near>0.05</near><far>2.5</far></clip> </camera>
+      <plugin name="kamera_on_controller" filename="libgazebo_ros_openni_kinect.so">
+        <cameraName>kamera_on</cameraName>
+        <alwaysOn>true</alwaysOn><updateRate>10</updateRate>
+        <imageTopicName>rgb/image_raw</imageTopicName>
+        <depthImageTopicName>depth/image_raw</depthImageTopicName>
+        <pointCloudTopicName>depth/points</pointCloudTopicName>
+        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <frameName>kamera_on_optical</frameName>
+        <baseline>0.1</baseline>
+        <pointCloudCutoff>0.4</pointCloudCutoff>
+        <pointCloudCutoffMax>2.5</pointCloudCutoffMax>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="base_link">
+    <visual>
+      <material>
+        <ambient>0.3 0.3 0.3 1</ambient>
+        <diffuse>0.3 0.3 0.3 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  
+  <link name="kamera_cukur_link">
+  </link>
+
+  <joint name="kamera_cukur_joint" type="fixed">
+    <origin xyz="0.30 0.0 0.45" rpy="0 0.785 0" />
+    <parent link="link_1" />
+    <child link="kamera_cukur_link" />
+  </joint>
+
+  <link name="kamera_cukur_optical" />
+  <joint name="kamera_cukur_optical_joint" type="fixed">
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.5708" />
+    <parent link="kamera_cukur_link" />
+    <child link="kamera_cukur_optical" />
+  </joint>
+
+  <gazebo reference="kamera_cukur_link">
+    <sensor type="depth" name="kamera_cukur_sensor">
+      <always_on>true</always_on>
+      <update_rate>10.0</update_rate>
+      <camera>
+        <horizontal_fov>1.57</horizontal_fov>
+        <image><format>R8G8B8</format><width>640</width><height>480</height></image>
+        <clip><near>0.05</near><far>3.0</far></clip>
+      </camera>
+      <plugin name="kamera_cukur_controller" filename="libgazebo_ros_openni_kinect.so">
+        <cameraName>kamera_cukur</cameraName>
+        <alwaysOn>true</alwaysOn><updateRate>10</updateRate>
+        <imageTopicName>rgb/image_raw</imageTopicName>
+        <depthImageTopicName>depth/image_raw</depthImageTopicName>
+        <pointCloudTopicName>depth/points</pointCloudTopicName>
+        <cameraInfoTopicName>rgb/camera_info</cameraInfoTopicName>
+        <depthImageCameraInfoTopicName>depth/camera_info</depthImageCameraInfoTopicName>
+        <frameName>kamera_cukur_optical</frameName>
+        <baseline>0.1</baseline>
+        <pointCloudCutoff>0.4</pointCloudCutoff>
+        <pointCloudCutoffMax>2.6</pointCloudCutoffMax>
+      </plugin>
+    </sensor>
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <gazebo reference="link_1">
+    <visual>
+      <material>
+        <ambient>0.95 0.75 0.05 1</ambient>
+        <diffuse>0.95 0.75 0.05 1</diffuse>
+        <specular>0.6 0.6 0.6 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+
+  <gazebo reference="link_2">
+    <visual>
+      <material>
+        <ambient>0.95 0.75 0.05 1</ambient>
+        <diffuse>0.95 0.75 0.05 1</diffuse>
+        <specular>0.6 0.6 0.6 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+
+  <gazebo reference="link_3">
+    <visual>
+      <material>
+        <ambient>0.95 0.75 0.05 1</ambient>
+        <diffuse>0.95 0.75 0.05 1</diffuse>
+        <specular>0.6 0.6 0.6 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+
+  <gazebo reference="link_4">
+    <visual>
+      <material>
+        <ambient>0.35 0.35 0.35 1</ambient>
+        <diffuse>0.35 0.35 0.35 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+  </gazebo>
+  
+  <gazebo reference="dummy_link"> <material>Gazebo/Red</material>
+  </gazebo>
+  
+  <gazebo reference="kamera_on_link"> <material>Gazebo/Blue</material>
+  </gazebo>
+</robot>
