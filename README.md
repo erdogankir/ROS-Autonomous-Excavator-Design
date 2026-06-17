@@ -26,7 +26,7 @@ All simulation and autonomous control phases were executed using **ROS Noetic**,
 4. **Trajectory Generation:** To eliminate mechanical jerks during operations, a custom Cosine Interpolation (S-Curve) motor was developed for smooth acceleration.
 5. **Hardware Proof of Concept:** A 6-axis open-loop physical prototype was manufactured, featuring low-latency teleoperation controlled by a Sony DualSense gamepad over Wi-Fi/Bluetooth.
 
-![PCAD Prototype](media/images/17.png)
+![PCAD Prototype](media/images/17.JPG)
 
 ![Physical Prototype](media/images/18.png)
 
@@ -71,7 +71,7 @@ Tüm simülasyon ve otonom kontrol aşamaları **ROS Noetic** kullanılarak ger�
 4. **Yörünge Planlaması:** Operasyonlar sırasında mekanik sarsıntıları önlemek ve ivmelenmeyi yumuşatmak için Kosinüs İnterpolasyon (S-Curve) motoru geliştirilmiştir.
 5. **Donanımsal İspat (Proof of Concept):** Wi-Fi/Bluetooth üzerinden Sony DualSense oyun kumandası ile kontrol edilen, düşük gecikmeli teleoperasyon yeteneğine sahip 6 eksenli açık çevrim bir fiziksel prototip üretilmiştir.
 
-![PCAD Prototype](media/images/17.png)
+![PCAD Prototype](media/images/17.JPG)
 
 ![Physical Prototype](media/images/18.png)
 
