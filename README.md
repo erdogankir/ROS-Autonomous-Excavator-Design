@@ -37,44 +37,6 @@ All simulation and autonomous control phases were executed using **ROS Noetic**,
 * `/documents`: Comprehensive engineering design report (in Turkish) detailing dynamic equations, electrical schematics, and simulation outputs.
 * `/media`: Contains project videos and high-resolution images demonstrating the Gazebo simulation and the physical prototype in action.
 
-```markdown
-## 🛠️ Dependencies & Installation
-
-### Prerequisites & Dependencies
-To run the simulation and autonomy nodes, ensure you have the following environment set up:
-* **OS:** Ubuntu 20.04 LTS
-* **Middleware:** ROS Noetic (Desktop Full Recommended)
-* **Physics Engine:** Gazebo 11
-* **ROS Packages:** `ros-noetic-moveit`, `ros-noetic-octomap-ros`, `ros-noetic-octomap-mapping`
-* **Python Libraries:** `opencv-python`, `numpy`
-* **Embedded Toolchain:** PlatformIO IDE (for ESP32 firmware verification)
-
-### Installation & Setup
-
-1. **Create a Catkin Workspace (if you don't have one):**
-   ```bash
-   mkdir -p ~/catkin_ws/src
-   cd ~/catkin_ws/src
-Clone the Repository:
-
-Bash
-git clone [https://github.com/erdogan-kir/ros-autonomous-excavator-design.git](https://github.com/erdogan-kir/ros-autonomous-excavator-design.git) .
-Install ROS Dependencies:
-
-Bash
-cd ~/catkin_ws
-rosdep install --from-paths src --ignore-src -r -y
-Build the Workspace:
-
-Bash
-catkin_make
-source devel/setup.bash
-Run the Simulation:
-To launch the Gazebo environment with the excavator and terrain:
-
-Bash
-roslaunch Exca-1 empty_world.launch
-
 ---
 *Designed by Erdoğan Kır as a senior Mechatronics Engineering design project.*
 
