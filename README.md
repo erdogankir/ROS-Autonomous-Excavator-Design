@@ -31,6 +31,43 @@ All simulation and autonomous control phases were executed using **ROS Noetic**,
 ![Physical Prototype](media/images/18.png)
 
 ## 📂 Repository Structure
+Markdown
+## 🛠️ Dependencies & Installation
+
+### Prerequisites & Dependencies
+To run the simulation and autonomy nodes, ensure you have the following environment set up:
+* **OS:** Ubuntu 20.04 LTS
+* **Middleware:** ROS Noetic (Desktop Full Recommended)
+* **Physics Engine:** Gazebo 11
+* **ROS Packages:** `ros-noetic-moveit`, `ros-noetic-octomap-ros`, `ros-noetic-octomap-mapping`
+* **Python Libraries:** `opencv-python`, `numpy`
+* **Embedded Toolchain:** PlatformIO IDE (for ESP32 firmware verification)
+
+### Installation & Setup
+
+1. **Create a Catkin Workspace (if you don't have one):**
+   ```bash
+   mkdir -p ~/catkin_ws/src
+   cd ~/catkin_ws/src
+Clone the Repository:
+
+Bash
+git clone [https://github.com/erdogan-kir/ros-autonomous-excavator-design.git](https://github.com/erdogan-kir/ros-autonomous-excavator-design.git) .
+Install ROS Dependencies:
+
+Bash
+cd ~/catkin_ws
+rosdep install --from-paths src --ignore-src -r -y
+Build the Workspace:
+
+Bash
+catkin_make
+source devel/setup.bash
+Run the Simulation:
+To launch the Gazebo environment with the excavator and terrain:
+
+Bash
+roslaunch Exca-1 empty_world.launch
 * `/ros_workspace`: Contains ROS Noetic packages, Gazebo simulation environments, URDF models, MoveIt! configurations, and Python/OpenCV autonomy scripts.
 * `/embedded_systems`: PlatformIO-based C++ source code for ESP32 teleoperation and motor driver control logic.
 * `/cad_files`: SolidWorks native files and exported .STEP/.STL files for 3D printing of the 1:10 scale physical prototype.
