@@ -37,6 +37,47 @@ All simulation and autonomous control phases were executed using **ROS Noetic**,
 * `/documents`: Comprehensive engineering design report (in Turkish) detailing dynamic equations, electrical schematics, and simulation outputs.
 * `/media`: Contains project videos and high-resolution images demonstrating the Gazebo simulation and the physical prototype in action.
 
+## 🛠 Dependencies
+To compile this project in the ROS environment and run the autonomous cycles, the following system requirements must be installed:
+
+**ROS & Simulation Side:**
+* ROS Noetic Ninjemys (Ubuntu 20.04)
+* Gazebo 11 (ODE Physics Engine)
+* MoveIt! and KDL Library (`ros-noetic-moveit`)
+* OctoMap 3D Mapping (`ros-noetic-octomap`, `ros-noetic-octomap-rviz-plugins`)
+* OpenCV Vision Library (`ros-noetic-vision-opencv`)
+
+**Embedded Systems Side (ESP32):**
+* PlatformIO IDE
+* ESP32 Board Packages
+* Adafruit PCA9685 PWM Driver Library
+
+## 🚀 Installation Instructions
+
+**1. Compiling the ROS Workspace:**
+```bash
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+git clone [https://github.com/erdogankir/ROS-Autonomous-Excavator-Design.git](https://github.com/erdogankir/ROS-Autonomous-Excavator-Design.git)
+cd ..
+rosdep install --from-paths src --ignore-src -r -y
+catkin_make
+source devel/setup.bash
+```
+
+**2. Flashing the Embedded Firmware:**
+* Open the `/embedded_systems/esp32_teleop` directory with VS Code (PlatformIO).
+* Connect the ESP32 to your computer via USB.
+* Compile and upload using the `Upload` button in PlatformIO.
+
+## 📌 Version and Commit Info
+* **Release Matching the Final Report:** [v1.0.0 - Final Report Release](https://github.com/erdogankir/ROS-Autonomous-Excavator-Design/releases/tag/v1.0.0)
+* The operational tests presented in the June 2026 graduation report were conducted on this specific version (commit).
+
+## 📄 License and Access
+* **License:** Non-Commercial Use Only
+* **Last Access Date:** June 17, 2026
+
 ---
 *Designed by Erdoğan Kır as a senior Mechatronics Engineering design project.*
 
@@ -81,8 +122,6 @@ Tüm simülasyon ve otonom kontrol aşamaları **ROS Noetic** kullanılarak ger�
 * `/cad_files`: 1:10 ölçekli fiziksel prototipin 3B basımı için SolidWorks yerel parça dosyaları ve dışa aktarılmış .STEP/.STL dosyaları.
 * `/documents`: Dinamik denklemleri, elektronik şemaları ve simülasyon çıktılarını detaylandıran kapsamlı mühendislik bitirme raporu.
 * `/media`: Gazebo simülasyonunu ve fiziksel prototipin çalışmasını gösteren proje videolarını ve yüksek çözünürlüklü görselleri içerir.
-
----
 
 ## 🛠 Bağımlılıklar (Dependencies)
 Bu projeyi ROS ortamında derleyebilmek ve otonom döngüleri çalıştırabilmek için aşağıdaki sistem gereksinimlerinin kurulu olması gerekmektedir:
