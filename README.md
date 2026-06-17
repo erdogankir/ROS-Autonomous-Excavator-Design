@@ -112,3 +112,20 @@ cd ..
 rosdep install --from-paths src --ignore-src -r -y
 catkin_make
 source devel/setup.bash
+2. Gömülü Yazılımın (Firmware) Flaşlanması:
+
+/embedded_systems/esp32_teleop dizinini VS Code (PlatformIO) ile açın.
+
+ESP32'yi USB üzerinden bilgisayara bağlayın.
+
+PlatformIO üzerinden Upload butonu ile derleyip yükleyin.
+
+📌 Sürüm ve Commit Bilgisi (Version)
+Raporla Eşleşen Sabit Sürüm: v1.0.0 - Bitirme Raporu Sürümü
+
+Haziran 2026'da sunulan bitirme raporundaki operasyonel testler bu sürüm (commit) üzerinden gerçekleştirilmiştir.
+
+📄 Lisans ve Erişim (License)
+Lisans: Sadece Ticari Olmayan Kullanım (Non-Commercial Use Only)
+
+Son Erişim Tarihi: 17 Haziran 2026
