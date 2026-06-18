@@ -75,7 +75,7 @@ source devel/setup.bash
 * The operational tests presented in the June 2026 graduation report were conducted on this specific version (commit).
 
 ## 📄 License and Access
-* **License:** Non-Commercial Use Only
+* **License:** Non-Commercial Use Only, Sharing With Attribution, Remix Culture Allowed
 * **Last Access Date:** June 17, 2026
 
 ---
@@ -159,7 +159,7 @@ source devel/setup.bash
 * Haziran 2026'da sunulan bitirme raporundaki operasyonel testler bu sürüm (commit) üzerinden gerçekleştirilmiştir.
 
 ## 📄 Lisans ve Erişim
-* **Lisans:** Sadece Ticari Olmayan Kullanım
+* **Lisans:** Sadece Ticari Olmayan Kullanım, Kaynak Belirtmek Şartıyla Paylaşım, Remix Kültürü İzni
 * **Son Erişim Tarihi:** 17 Haziran 2026
 
 ---
